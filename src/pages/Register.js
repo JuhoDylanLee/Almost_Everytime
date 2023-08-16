@@ -12,8 +12,8 @@ function Register(props) {
   };
 
   return (
-    <>
-      <form action="/" method="post">
+    <div className="auth-form-container">
+      <form className="register-form" action="/" method="post">
         <div>
           <label htmlFor="name">Full Name</label>
           <input type="name" name="name" id="name" placeholder="Full Name" />
@@ -44,11 +44,13 @@ function Register(props) {
         <Link to="/">
           <button> Go Back </button>
         </Link>
-        <button onClick={props.onFormSwitch}>
-          Already have an account? Login here.
-        </button>
+        <Link to="/Login">
+          <button className="link-btn" onClick={props.onFormSwitch}>
+            Already have an account? Login here.
+          </button>
+        </Link>
       </form>
-    </>
+    </div>
   );
 }
 
